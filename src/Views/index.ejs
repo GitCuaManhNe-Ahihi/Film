@@ -8,6 +8,10 @@
     <link rel="icon" href="./assets/images/fav-icon.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
 </head>
 <body>
     <header>
@@ -43,11 +47,140 @@
                 </form>
             </div>
     </header>
+    <section class="trendingFilm">
+        
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="Film" style="background: url(./assets/images/p-1.jpg);background-size: cover; background-position: center;">
+                <span class="quality">Full hd</span>
+                <div class="decription">
+                   <p class="year">2014</p>
+                   <p class="name">Paranormal Activity:The Marked Once</p>
+                   <div class="actor-ratting">
+                            <div class="actor">Herror,Mistery,Thriller</div>
+                            <div class="ratting">5.2 <span ></span></div>
+                   </div>
+                </div>
+                <div class="overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+            </div>
+           </div>
+              <div class="swiper-slide"><div class="Film" style="background: url(./assets/images/p-2.jpg);background-size: cover; background-position: center;">
+                <span class="quality">Full hd</span>
+                <div class="decription">
+                   <p class="year">2017</p>
+                   <p class="name">Pirates of the Caribbean: Salazar's Revenge</p>
+                   <div class="actor-ratting">
+                            <div class="actor">Herror,Mistery,Thriller</div>
+                            <div class="ratting">5.2 <span ></span></div>
+                   </div>
+                </div>
+                <div class="overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+            </div></div>
+              <div class="swiper-slide"><div class="Film" style="background: url(./assets/images/p-3.jpg);background-size: cover; background-position: center;">
+                <span class="quality">Full hd</span>
+                <div class="decription">
+                   <p class="year">2020</p>
+                   <p class="name">BloodShoot</p>
+                   <div class="actor-ratting">
+                            <div class="actor">Herror,Mistery,Thriller</div>
+                            <div class="ratting">5.2 <span ></span></div>
+                   </div>
+                </div>
+                <div class="overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+            </div></div>
+              <div class="swiper-slide"><div class="Film" style="background: url(./assets/images/p-4.jpg);background-size: cover; background-position: center;">
+                <span class="quality">Full hd</span>
+                <div class="decription">
+                   <p class="year">2021</p>
+                   <p class="name">Venom: Let The Be Carnage</p>
+                   <div class="actor-ratting">
+                            <div class="actor">Herror,Mistery,Thriller</div>
+                            <div class="ratting">5.2 <span ></span></div>
+                   </div>
+                </div>
+                <div class="overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+            </div></div>
+              <div class="swiper-slide"><div class="Film" style="background: url(./assets/images/p-5.jpg);background-size: cover; background-position: center;">
+                <span class="quality">Full hd</span>
+                <div class="decription">
+                   <p class="year">2018</p>
+                   <p class="name">Deadpool 2</p>
+                   <div class="actor-ratting">
+                            <div class="actor">Herror,Mistery,Thriller</div>
+                            <div class="ratting">5.2 <span ></span></div>
+                   </div>
+                </div>
+                <div class="overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+            </div></div>
+              <div class="swiper-slide">
+                   <div class="Film" style="background: url(./assets/images/p-6.jpg);background-size: cover; background-position: center;">
+                <span class="quality">Full hd</span>
+                <div class="decription">
+                   <p class="year">2021</p>
+                   <p class="name">Black Window</p>
+                   <div class="actor-ratting">
+                            <div class="actor">Herror,Mistery,Thriller</div>
+                            <div class="ratting">5.2 <span ></span></div>
+                   </div>
+                </div>
+                <div class="overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+            </div></div>
+             
+            </div>
+            <!-- Add Pagination -->
+           
+            <!-- Add Arrows -->
+           
+          </div>
+          <div class="arrow-btn">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+    </section>
     <script src="./js/index.js"></script>
     <script type="module">
         import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
-      
-        const swiper = new Swiper(...)
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+      spaceBetween: 10,
+      // init: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+    
       </script>
 </body>
 </html>

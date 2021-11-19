@@ -37,7 +37,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .menu i {
@@ -87,8 +87,9 @@ header {
   text-transform: uppercase;
 }
 
-.menu .menu-show ul a:hover {
+.menu .menu-show ul li:hover > a {
   color: #970e0e;
+  font-size: 5.5rem;
 }
 
 .menu-show.active {
@@ -164,5 +165,169 @@ header {
           transform: translateY(-50%);
   font-size: 2rem;
   right: 2rem;
+}
+
+.trendingFilm {
+  position: relative;
+  width: 80%;
+  margin: 6rem auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.Film {
+  width: 55rem;
+  height: 65rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: height linear 0.5s;
+  transition: height linear 0.5s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.Film .quality {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding: .5rem .8rem;
+  font-weight: 900;
+  background-color: #920909;
+}
+
+.Film .decription {
+  position: absolute;
+  bottom: 3rem;
+  color: white;
+  padding: 0 3rem;
+  font-size: 2rem;
+}
+
+.Film .decription .year, .Film .decription .name {
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.Film .decription .actor-ratting {
+  width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.Film .decription .actor-ratting .actor {
+  color: #8b0909;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.Film .decription .actor-ratting .ratting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.Film .decription .actor-ratting .ratting span {
+  display: block;
+  height: 3rem;
+  width: 5rem;
+  margin: 0 .5rem;
+  background: url(../assets/images/IMDb-icon.png);
+  background-size: 100% 100%;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.overlay i {
+  font-size: 5rem;
+  color: white;
+}
+
+.Film:hover .overlay {
+  height: 100%;
+}
+
+.swiper {
+  position: relative;
+  top: 0rem;
+  width: 100%;
+}
+
+.swiper-slide {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.arrow-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  width: 12rem;
+  height: 5rem;
+  bottom: -7rem;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arrow-btn .swiper-button-next,
+.arrow-btn .swiper-button-prev {
+  color: white;
+  font-weight: 900;
 }
 /*# sourceMappingURL=style.css.map */
