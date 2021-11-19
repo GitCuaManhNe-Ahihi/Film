@@ -1,0 +1,34 @@
+{
+  "name": "filmclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GitCuaManhNe-Ahihi/Film.git"
+  },
+  "keywords": [
+    "Film"
+  ],
+  "author": "ManhneAhihi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GitCuaManhNe-Ahihi/Film/issues"
+  },
+  "homepage": "https://github.com/GitCuaManhNe-Ahihi/Film#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15"
+  }
+}
